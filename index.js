@@ -153,5 +153,3 @@ app.listen(port, () => {//spustni serveru
   console.log(`Example app listening on port ${port}`)
 
 })
-
-dfghdhdh
