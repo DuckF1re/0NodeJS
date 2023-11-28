@@ -88,7 +88,21 @@ app.get('/newuser', (req, res) => {
      
     })
 
-
+    app.post('/deleteuser', function (request, response, next) {
+      console.log(request.body)
+        // SQL dotaz pro vložení dat do databáze
+        var sql = `DELETE FROM students WHERE id=${request.body.id}`;
+       
+        con.query(sql, (error, results, fields) => {
+          if (error) {
+            console.error(error);
+            return;
+          }
+          console.log(results);
+        })
+        response.send(`Uživatele byli vloženi do DB`)
+       
+      })
     
  
 
