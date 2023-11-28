@@ -17,7 +17,7 @@ app.use(express.static('public'));
  
 
 app.set('view engine', 'ejs');
-
+app.use(express.json())
 app.set('views', path.join(__dirname, 'views'));
 
  
@@ -60,7 +60,7 @@ con.connect(function(err) {
   
 con2.connect(function(err) {
   if (err) throw err;
-  console.log("Connected to the second database!");
+  console.log("Connected to the second database");
 });
 
 });
@@ -87,8 +87,7 @@ app.get('/newuser', (req, res) => {
       response.send(`Uživatele byli vloženi do DB`)
      
     })
-   
-    
+
 
     
  
@@ -103,8 +102,7 @@ app.get('/', (req, res) => {//home routa
 
         if (err) throw err;
 
-        con.query("SELECT * FROM students",  function (err, result, fields) {
-
+        con.query("SELECT * FROM students",  function (err, result, fields) { 
           if (err) throw err;
 
           console.log(result);
@@ -117,7 +115,7 @@ app.get('/', (req, res) => {//home routa
       })
 
       app.get('/filter', (req, res) => {
-        const city = req.query.city; // Assuming the parameter is 'city'
+        const city = req.query.city; 
         
         const sql = `SELECT * FROM students WHERE city = '${city}'`;
       
@@ -153,3 +151,4 @@ app.listen(port, () => {//spustni serveru
   console.log(`Example app listening on port ${port}`)
 
 })
+

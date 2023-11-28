@@ -6,34 +6,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css"  rel="stylesheet" type="text/css"> 
+    <script src="mazat.js"></script>
     <title>admin</title>
 </head>
 <body>
+  <a href="/newuser">Registration</a>
     <table>
-      
-        <a href="/newuser">Registration</a>
-        
-        <% for(var i=0; i < result.length; i++) { %>
-          <tr>
-            <td class="vl"> 
-              <%= result[i].id %>
-            </td>
-            <td>
-              <%= result[i].fname %>
-            </td>
-            <td>
-              <%= result[i].lname %>
-            </td>
-            <td>
-              <%= result[i].age %>
-            </td>
-            <td>
-              <%= result[i].city %>
-            </td>
-             
-            </td>
-          </tr>
-          <% } %>
-      </table>
-</body>
-</html>
+      <body>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+              <th>City</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% result.forEach(function(item) { %>
+              <tr>
+                <td><%= item.id %></td>
+                <td><%= item.fname %></td>
+                <td><%= item.lname %></td>
+                <td><%= item.age %></td>
+                <td><%= item.city %></td> 
+                <td><button class="smazatB" onclick="mazat(<%=item.id%>)">smazat</button></td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </body>
+      </html>

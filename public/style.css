@@ -1,22 +1,46 @@
-table {
-  border: 3px solid white;
-  color:white;
-  margin:65vh;
-  margin-top: 33vh;
-  margin-right: 5px;
-  width: 50%;
-  padding-right: auto;
-  
-}
 body {
-  margin: 0px;
-  background-color: rgb(0, 0, 0); 
+  background-color: #f0eae2; /* Beige background color */
+  font-family: Arial, sans-serif;
+  color: #333; /* Dark text color */
+  margin-top: 30vh;
 }
 
+table {
+  margin: 10px auto;
+  width: 70%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #d3c9ba; /* Light beige border for cells */
+  padding: 12px;
+  text-align: left;
+  transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+th {
+  background-color: #c1b5a7; /* Light beige background for table headers */
+  color: #333;
+}
+
+tr:hover {
+  background-color: #e1dcd4; /* Slightly darker beige background on hover for better feedback */
+}
+
+td:hover {
+  transform: scale(1.05); /* Scale the cells on hover for a subtle animation effect */
+}
 
 a {
-  margin-top: 20vh;
-  padding: 4vh;
-  border: 2px solid white;
-  color: white;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  border: 2px solid #d3c9ba; /* Light beige border for links */
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+}
+
+a:hover {
+  background-color: #e1dcd4; /* Slightly darker beige background on hover for links */
 }
