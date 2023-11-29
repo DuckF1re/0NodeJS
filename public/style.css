@@ -44,3 +44,44 @@ a {
 a:hover {
   background-color: #e1dcd4; /* Slightly darker beige background on hover for links */
 }
+
+.smazatB {
+    background-color: #d3c9ba;
+    color: #000000; /* Text color, you can adjust this based on your design */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 16px; /* Adjust font size as needed */
+    border: none;
+    border-radius: 5px; /* Adjust border-radius for rounded corners */
+    cursor: pointer;
+  }
+  
+  /* Hover effect for the button */
+  .smazatB:hover {
+    background-color: #b3a99a; /* Adjust hover color as needed */
+  }
+/* CSS for the input box */
+.inputTD {
+  width: 100px; /* Adjust the width as needed */
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Style for focused state */
+.inputTD:focus {
+  outline: none;
+  border-color: #4caf50; /* Change the color when the input is focused */
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7); /* Add a subtle box shadow for focus effect */
+}
+
+/* Placeholder text style */
+.inputTD::placeholder {
+  color: #999; /* Adjust the placeholder text color */
+}
+
+/* Hover effect */
+.inputTD:hover {
+  border-color: #333; /* Change the border color on hover */
+}

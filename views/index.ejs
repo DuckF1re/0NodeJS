@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css"  rel="stylesheet" type="text/css"> 
-    <script src="mazat.js"></script>
+    <script src="script.js"></script>
     <title>admin</title>
 </head>
 <body>
@@ -26,12 +26,14 @@
           <tbody>
             <% result.forEach(function(item) { %>
               <tr>
-                <td><%= item.id %></td>
-                <td><%= item.fname %></td>
-                <td><%= item.lname %></td>
-                <td><%= item.age %></td>
-                <td><%= item.city %></td> 
+                <td><%=item.id%></td>
+                <td><input class="inputTD" id="<%=item.id%>.fname" type="text" value="<%=item.fname%>"></td>
+                <td><input class="inputTD" id="<%=item.id%>.lname" type="text" value="<%=item.lname%>"></td>
+                <td><input class="inputTD" id="<%=item.id%>.age" type="text" value="<%=item.age%>"></td>
+                <td><input class="inputTD" id="<%=item.id%>.city" type="text" value="<%=item.city%>"></td>
+
                 <td><button class="smazatB" onclick="mazat(<%=item.id%>)">smazat</button></td>
+                <td><button class="smazatB" onclick="ulozto(<%=item.id%>)">upravit</button></td>
               </tr>
             <% }); %>
           </tbody>
