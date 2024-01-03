@@ -37,17 +37,17 @@ const con2 = mysql.createConnection({
 
 con.connect(function(err) {
   if (err) throw err;
-  console.log("Connected!");
+  console.log("JEDE TO!");
 con2.connect(function(err) {
   if (err) throw err;
-  console.log("Connected to the second database");
+  console.log("JEDE I DRUHÁ!");
 });
 
 });
 
 
 
-
+ 
 app.get('/newuser', (req, res) => {
   res.render('newuser');
   })
@@ -63,7 +63,7 @@ app.get('/newuser', (req, res) => {
         }
         console.log(results);
       })
-      response.send(`Student byl zaregistrován`)
+      response.redirect(`/newuser`)
      
     })
 
@@ -92,10 +92,17 @@ app.get('/', (req, res) => {//home routa
 
     con.connect(function(err) {
         if (err) throw err;
-        con.query("SELECT * FROM students",  function (err, result, fields) { 
+        const pole = []
+        con.query("SELECT * FROM students AS t1 LEFT JOIN teachers AS t2 ON t1.teachersid = t2.ID",  function (err, result) { 
           if (err) throw err;
-          console.log(result);
-          res.render('index', { result });
+          pole.push(result)
+          con.query("SELECT * FROM teachers",  function (err, result2) { 
+            if (err) throw err;
+            pole.push(result2)
+            res.render('index', { pole });
+          });
+          
+        
 
         });
 
@@ -139,7 +146,7 @@ app.listen(port, () => {
 })
 
 app.post('/update', (req) => { 
-  con.query(`UPDATE students SET fname='${req.body.fname}', lname='${req.body.lname}', age='${req.body.age}', city='${req.body.city}' WHERE id=${req.body.id}`, function (err) {
+  con.query(`UPDATE students SET fname='${req.body.fname}', lname='${req.body.lname}', age='${req.body.age}', city='${req.body.city}', teachersid=${req.body.Lname} WHERE id=${req.body.id}`, function (err) {
       if (err) throw err
   });
 })

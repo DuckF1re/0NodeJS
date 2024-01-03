@@ -1,30 +1,36 @@
-body {
-  background-color: #f0eae2; /* Beige background color */
-  font-family: Arial, sans-serif;
-  color: #333; /* Dark text color */
-  margin-top: 30vh;
-}
+
+  body {
+    font-family: Arial, sans-serif;
+    color: #fff;
+    margin-top: 10vh;
+    background-color: black; /* Dark background color for the entire page */
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+  }
+  
 
 table {
   margin: 10px auto;
   width: 70%;
   border-collapse: collapse;
+  border: 2px solid #000000; /* Green border color */
+  background-color: #212121; /* Dark background color for the table */
+  color: #fff;
 }
 
 th, td {
-  border: 1px solid #d3c9ba; /* Light beige border for cells */
+  border: 1px solid #fafafa;
   padding: 12px;
   text-align: left;
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform animation */
 }
 
 th {
-  background-color: #c1b5a7; /* Light beige background for table headers */
-  color: #333;
+  background-color: #1976D2; /* Dark blue background for table headers */
+  color: #fff;
 }
 
 tr:hover {
-  background-color: #e1dcd4; /* Slightly darker beige background on hover for better feedback */
+  background-color: #333; /* Darker background on hover for better feedback */
 }
 
 td:hover {
@@ -35,53 +41,62 @@ a {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 20px;
-  border: 2px solid #d3c9ba; /* Light beige border for links */
-  color: #333;
+  background-color: #1976D2;
+  color: #000000;
   text-decoration: none;
-  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+  transition: background-color 0.3s ease;
 }
 
 a:hover {
-  background-color: #e1dcd4; /* Slightly darker beige background on hover for links */
+  background-color: #1565C0; /* Slightly darker blue background on hover for links */
 }
 
 .smazatB {
-    background-color: #d3c9ba;
-    color: #000000; /* Text color, you can adjust this based on your design */
-    padding: 10px 20px; /* Adjust padding as needed */
-    font-size: 16px; /* Adjust font size as needed */
-    border: none;
-    border-radius: 5px; /* Adjust border-radius for rounded corners */
-    cursor: pointer;
-  }
-  
-  /* Hover effect for the button */
-  .smazatB:hover {
-    background-color: #b3a99a; /* Adjust hover color as needed */
-  }
-/* CSS for the input box */
+  background-color: #1976D2;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Added transform animation */
+}
+
+.smazatB:hover {
+  background-color: #1565C0; /* Slightly darker blue background on hover for the button */
+  transform: scale(1.05); /* Scale the button on hover for a subtle animation effect */
+}
+
 .inputTD {
-  width: 100px; /* Adjust the width as needed */
+  width: 150px;
   padding: 10px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 5px;
   font-size: 16px;
+  background-color: #333; /* Dark background color for the input box */
+  color: #fff;
+  transition: border-color 0.3s ease; /* Added border-color transition on hover */
 }
 
-/* Style for focused state */
 .inputTD:focus {
   outline: none;
-  border-color: #4caf50; /* Change the color when the input is focused */
-  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7); /* Add a subtle box shadow for focus effect */
 }
 
-/* Placeholder text style */
 .inputTD::placeholder {
-  color: #999; /* Adjust the placeholder text color */
+  color: #999;
 }
 
-/* Hover effect */
 .inputTD:hover {
-  border-color: #333; /* Change the border color on hover */
+  border-color: #93c495; /* Green border color on hover */
 }
+
+.trash-icon {
+  color: #333;
+  transition: color 0.3s ease; /* Added color transition on hover */
+}
+
+.trash-icon:hover {
+  color: #4CAF50; /* Green color on hover for the trash icon */
+}
+

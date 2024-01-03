@@ -1,77 +1,74 @@
-
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #1a1a1a;
+    background-color: #121212;
+    font-family: Arial, sans-serif;
     color: #fff;
-    margin: 0;
-    padding: 0;
-    transition: background-color 0.3s ease; /* Smooth transition for background color */
-}
-
-div {
+    margin-top: 30vh;
+  }
+  
+  div {
     max-width: 400px;
     margin: 50px auto;
-    background-color: #fff;
-    color: #333;
+    background-color: #212121;
+    color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease;
-}
-
-div:hover {
+  }
+  
+  div:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-h1 {
-    color: #333;
-    transition: color 0.3s ease; /* Smooth transition for text color */
-}
-
-form {
-    display: grid;
-    gap: 15px;
-}
-
-label {
+  }
+  
+  h1 {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  label {
     display: block;
     margin-bottom: 5px;
-    color: #333;
-    transition: color 0.3s ease; /* Smooth transition for label color */
-}
-
-input {
+    color: #fff;
+    transition: color 0.3s ease;
+  }
+  
+  input {
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
-    border: 1px solid #555;
+    border: 1px solid #4b636e;
     border-radius: 4px;
-    color: #333;
-    background-color: #ddd;
-    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease; /* Smooth transitions on hover */
-}
-
-input:hover {
-    background-color: #ccc;
-    border: 1px solid #444;
-    color: #222; /* Darker text on hover */
-}
-
-button {
-    background-color: #3498db;
+    color: #fff;
+    background-color: #5e6d7d;
+    transition: background-color 0.3s ease, border 0.3s ease, color 0.3s ease;
+  }
+  
+  input:hover {
+    background-color: #6c7d8e;
+    border: 1px solid #7e8f9e;
+    color: #ecf0f1;
+  }
+  
+  button {
+    background-color: #1976D2;
     color: #fff;
     padding: 12px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for button color */
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #1565C0;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  h1 {
+    text-align: center;
 
-button:hover {
-    background-color: #217dbb;
-}
 
-/* Additional animation for button click effect */
-button:active {
-    transform: scale(0.95); /* Slight scale down on button click */
-}
+  }
