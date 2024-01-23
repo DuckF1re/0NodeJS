@@ -17,7 +17,12 @@
   <a href="/newuser">Registration</a>
     <table>
       <body>
+        <label for="searchInput">Search:</label>
+        <input type="text" id="searchInput" placeholder="Enter search term">
+        <button onclick="performSearch()">Search</button>
+
         <table>
+          <div id="searchResults"></div>
           <thead>
             <tr>
               <th>ID</th>
@@ -63,4 +68,5 @@
           </tbody>
         </table>
       </body>
+    
       </html>

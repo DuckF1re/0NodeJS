@@ -141,7 +141,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.listen(port, () => {
 
-  console.log(`Example app listening on port ${port}`)
+  console.log(`sem klikni http://localhost:${port}`)
 
 })
 
