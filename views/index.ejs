@@ -17,14 +17,15 @@
   <a href="/newuser">Registration</a>
     <table>
       <body>
-        <label for="searchInput">Search:</label>
-        <input type="text" id="searchInput" placeholder="Enter search term">
-        <button onclick="performSearch()">Search</button>
-
+        <div>
+        <label class="vyhledat" for="searchInput">Vyhledat:</label>
+        <input class="vyhledat" type="text" id="searchInput" placeholder="zadejte id">
+        <button class="vyhledavat" onclick="performSearch()">Search</button>
+      </div>
         <table>
           <div id="searchResults"></div>
           <thead>
-            <tr>
+            <tr id="ignore">
               <th>ID</th>
               <th>Jméno</th>
               <th>Příjmení</th>
@@ -38,7 +39,7 @@
           <tbody>
             
             <% pole[0].forEach(function(item) { %>
-              <tr>
+              <tr id="<%=item.id%>">
                 <td><%=item.id%></td>
                 <td><input class="inputTD" id="<%=item.id%>.fname" type="text" value="<%=item.fname%>"></td>
                 <td><input class="inputTD" id="<%=item.id%>.lname" type="text" value="<%=item.lname%>"></td>

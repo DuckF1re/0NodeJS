@@ -32,27 +32,12 @@ function ulozto(id) {
     })
 }
 
-function findElementByIdInTable(tableId, elementId) {
-  
-    var table = document.getElementById(tableId);
+function performSearch() {
+  const cislo = $("#searchInput").val()
+  console.log($(`tr:not(#${cislo})`))
+  $(`tr:not(${cislo})`).each(function() {
+    //console.log($(this).attr('id'))
+    if ($(this).attr('id') != cislo && $(this).attr('id') != "ignore") $(this).hide()
+  })
 
-    for (var i = 0, row; row = table.rows[i]; i++) {
-      for (var j = 0, cell; cell = row.cells[j]; j++) {
-        if (cell.id === elementId) {
-          console.log('Found element with ID:', elementId);
-          return cell;
-        }
-      }
-    }
-
-
-    console.log('Element with ID not found:', elementId);
-    return null;
-  }
-
-
-  var foundElement = findElementByIdInTable('myTable', 'cell3');
-  if (foundElement) {
-    
-    console.log('Text content of found element:', foundElement.textContent);
-  }
+}
